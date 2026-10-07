@@ -1,0 +1,308 @@
+[
+  {
+    "title": "CRYOGEN FREE MEASUREMENT SYSTEM",
+    "node_id": "0000",
+    "start_index": 1,
+    "end_index": 34,
+    "summary": "This section covers the Cryogen-Free Measurement System (CFMS) installed at IIT (BHU) Varanasi, detailing its purpose for studying material transport properties under extreme low-temperature and high-magnetic-field conditions. It outlines the system's five major subsystems: the cryo-cooler system (including its cooling procedure and water chiller), the cryostat and superconducting magnet, the Variable Temperature Insert (VTI), vacuum pumps (scroll and rotary vane), and the electronics rack (incorporating temperature controllers, magnet power supplies, and measurement instruments). Additionally, it describes the LabVIEW-based software and Virtual Instrument (VI) modules used for system control and automation, provides comprehensive operating procedures and safety guidelines, outlines routine maintenance schedules and troubleshooting techniques, and concludes with the system's research applications, technical measurements, and detailed hardware specifications.",
+    "text": "",
+    "nodes": [
+      {
+        "title": "CRYOGEN FREE MEASUREMENT SYSTEM (intro)",
+        "node_id": "0001",
+        "start_index": 1,
+        "end_index": 3,
+        "summary": "This document introduces the Cryogen-Free Measurement System (CFMS) developed by Cryogenic Limited at IIT (BHU) Varanasi. It outlines the manual's structure via a table of contents and provides an introductory overview of the helium-less platform designed for conducting low-temperature and high-magnetic-field experiments.",
+        "text": "# CRYOGEN FREE MEASUREMENT SYSTEM\n\n![img-0.jpeg](img-0.jpeg)\n\n[LOGO]\n\n**Made by -**  **Guided by -**\nPranav Choubey  Dr. Sanjay Singh\n\nSchool of Material Science and\nTechnology,\nIIT (BHU) Varanasi.\n\nTABLE OF CONTENTS\n\n1. Introduction to Cryogen-Free Measurement System\n2. Components of CFMS\n3. Cryo-Cooler System\n4. Cryostat and Superconducting Magnet\n5. Variable Temperature Insert (VTI)\n6. Electronics Rack\n7. Measurement Software\n8. Virtual Instrument (VI) Modules\n9. Operating the system\n10. Warming up and Safety guidelines\n11. Maintenance schedule and Troubleshooting techniques\n12. Applications of CFMS\n13. System specifications\n\nIntroduction to Cryogen-Free Measurement Systems (CFMS)\n\nThe Cryogen-Free Measurement System (CFMS) developed by Cryogenic Limited is an advanced, helium-less platform used for very high magnetic field and low temperature experiments. It is specifically engineered to reduce the requirement of liquid helium which is major challenge in low temperature research.\n"
+      },
+      {
+        "title": "Purpose of CFMS:",
+        "node_id": "0002",
+        "start_index": 3,
+        "end_index": 4,
+        "summary": "## Purpose of CFMS:\n\n- To study transport properties (I-V characteristics, resistivity, magnetoresistance, Hall effect) of materials under extreme conditions of temperature and magnetic field.\n- Designed for ease of operation, reliability, and accurate measurements over long durations.\n- The mCFMS also known as Mini High Field Measurement CFMS (3\u20137 T range) offers a self-contained system with a pulse-tube cryocooler, superconducting magnet, and variable temperature insert (VTI).\n",
+        "text": "## Purpose of CFMS:\n\n- To study transport properties (I-V characteristics, resistivity, magnetoresistance, Hall effect) of materials under extreme conditions of temperature and magnetic field.\n- Designed for ease of operation, reliability, and accurate measurements over long durations.\n- The mCFMS also known as Mini High Field Measurement CFMS (3\u20137 T range) offers a self-contained system with a pulse-tube cryocooler, superconducting magnet, and variable temperature insert (VTI).\n"
+      },
+      {
+        "title": "Components of CFMS:",
+        "node_id": "0003",
+        "start_index": 4,
+        "end_index": 5,
+        "summary": "## Components of CFMS:\n\nThe CFMS is composed of five major sub-systems:\n\n1. Cryo-cooler system\n2. Cryostat and superconducting magnet\n3. Variable Temperature Insert (VTI)\n4. Electronics Rack\n5. Measurement Software (LabVIEW-based)\n\nEach of these subsystems works together to achieve the goal of delivering a flexible cryogenic experimental platform.\n\nSufficient LAB space and Air-Conditioned is required of the CFMS setup.\n\n![img-1.jpeg](img-1.jpeg)\n",
+        "text": "## Components of CFMS:\n\nThe CFMS is composed of five major sub-systems:\n\n1. Cryo-cooler system\n2. Cryostat and superconducting magnet\n3. Variable Temperature Insert (VTI)\n4. Electronics Rack\n5. Measurement Software (LabVIEW-based)\n\nEach of these subsystems works together to achieve the goal of delivering a flexible cryogenic experimental platform.\n\nSufficient LAB space and Air-Conditioned is required of the CFMS setup.\n\n![img-1.jpeg](img-1.jpeg)\n"
+      },
+      {
+        "title": "Cryo-Cooler System",
+        "node_id": "0004",
+        "start_index": 5,
+        "end_index": 7,
+        "summary": "This text provides a comprehensive overview of the Cryo-Cooler System, detailing its definition, types (Gifford-McMahon and Pulse Tube), dual-stage functionality, cooling performance metrics, physical construction, and the step-by-step working mechanism of the helium compression and purification cycle.",
+        "text": "## Cryo-Cooler System\n\n### Overview:\n\nA mechanical refrigeration device that cools system components using non-consumed helium gas.\n\n### Types of Cryocoolers:\n\n#### 1) Gifford-McMahon (GM):\n\n1) High thermodynamic efficiency.\n2) Uses pistons and regenerators.\n3) Operates in various orientations.\n\n#### 2) Pulse Tube (PT):\n\n1) No cold moving parts.\n2) Quieter, more reliable.\n3) Longer service intervals, lower operating costs.\n\n### Functionality:\n\n- Stage 1 (40-60 K): Cools the radiation shield.\n- Stage 2 (4 K): Directly cools the magnet and Variable Temperature Insert (VTI).\n\n### Cooling Performance:\n\n- 50 W(J/s) at 60 K\n- Up to 1.5 W(J/s) at 4 K\n- (i.e. 1.5 J of heat is absorbed per second by cryocooler at a temperature of 4 K)\n\n### Construction:\n\n- Cold head on cryostat top plate.\n- Connected to helium compressor via high-pressure hoses (up to 20 m).\n\n![img-2.jpeg](img-2.jpeg)\n\nF-50 Sumitomo Cryogenics\nPulse Tube Cryo-Cooler\n\n### Working of Cryo-Cooler\n\n- Helium returns from cryocooler at ~1\u20132 MPa.\n- Helium enters sealed scroll compressor; orbiting scroll compresses helium by shrinking gas pockets.\n- Oil lubricates, seals gaps, and absorbs heat during compression.\n- Compressed helium (~18\u201325 bar) exits mixed with oil.\n- Bulk oil separator removes large oil droplets by gravity.\n- Gas-oil mixture is cooled in water-cooled heat exchanger.\n- Cooled oil is reinjected into scroll; excess oil returns to sump.\n- Fine mist separator removes remaining oil droplets.\n- Adsorber removes final oil vapor and moisture.\n- Clean, dry, high-pressure helium goes to cryocooler.\n- Relief valves, equalization valve, and sensors protect and monitor system.\n\n![img-3.jpeg](img-3.jpeg)\n"
+      },
+      {
+        "title": "Cooling Procedure:",
+        "node_id": "0005",
+        "start_index": 7,
+        "end_index": 8,
+        "summary": "## Cooling Procedure:\n\n- The Chiller cools water using compressors inside it to 17\u201320 \u00b0C.\n- This water cools the helium compressor of Cryo Cooler.\n- Cryo-Cooler compresses helium gas \u2192 generates high-pressure helium.\n- High-pressure helium flows to the cold head.\n- Inside cold head: Regenerator pre-cools helium gas.\n- Then gas enters the Pulse Tube, where it expands and cools.\n- Cold helium (~4 K) absorbs heat from magnet/sample.\n- Warmed low-pressure gas returns to compressor.\n- Cycle repeats for continuous cooling.\n- Chiller removes heat from compressor, and fan ejects it to air.\n\n![img-4.jpeg](img-4.jpeg)\n\nWater Chiller\n",
+        "text": "## Cooling Procedure:\n\n- The Chiller cools water using compressors inside it to 17\u201320 \u00b0C.\n- This water cools the helium compressor of Cryo Cooler.\n- Cryo-Cooler compresses helium gas \u2192 generates high-pressure helium.\n- High-pressure helium flows to the cold head.\n- Inside cold head: Regenerator pre-cools helium gas.\n- Then gas enters the Pulse Tube, where it expands and cools.\n- Cold helium (~4 K) absorbs heat from magnet/sample.\n- Warmed low-pressure gas returns to compressor.\n- Cycle repeats for continuous cooling.\n- Chiller removes heat from compressor, and fan ejects it to air.\n\n![img-4.jpeg](img-4.jpeg)\n\nWater Chiller\n"
+      },
+      {
+        "title": "Cryostat and Magnet",
+        "node_id": "0006",
+        "start_index": 8,
+        "end_index": 11,
+        "summary": "The text outlines the components and structure of the Cryostat and Magnet systems used in the CFMS, detailing their materials, thermal and electrical configurations, alongside visual diagrams of the machinery and sample holders.",
+        "text": "## Cryostat and Magnet\n\n### Cryostat:\n\n- A vacuum-insulated enclosure.\n- Provides mechanical support and thermal isolation.\n- Houses the superconducting solenoid and the VTI.\n\n### Magnet:\n\n- A vertically oriented filamentary superconducting solenoid.\n- Made from:\n  - NbTi wires for lower field strengths.\n  - NbTi + Nb\u2083Sn wires for higher fields.\n- Copper stabilized for safety and performance.\n- Connects electrically via High-Temperature Superconducting (HTS) current leads to minimize thermal conduction from the outside.\n\n![img-5.jpeg](img-5.jpeg)\n\nCryogenics\nLimited mCFMS\nCryostat and\nMagnet\n\n![img-6.jpeg](img-6.jpeg)\n\nHelium\nGas\nReservoir\n\n### Visual Representation of Machines Used in CFMS\n\n![img-7.jpeg](img-7.jpeg)\n\n### Sample holder diagram\n\n![img-8.jpeg](img-8.jpeg)\n\n![img-9.jpeg](img-9.jpeg)\n\n![img-10.jpeg](img-10.jpeg)\n\n![img-11.jpeg](img-11.jpeg)\n\nSample\n\n![img-12.jpeg](img-12.jpeg)\n\n![img-13.jpeg](img-13.jpeg)\n"
+      },
+      {
+        "title": "Variable Temperature Insert (VTI)",
+        "node_id": "0007",
+        "start_index": 11,
+        "end_index": 13,
+        "summary": "This text details the Variable Temperature Insert (VTI), outlining its primary functions, the operational sequence of its helium-based cooling circuit, its thermometry sensor configuration, and its dual-heater temperature control features.",
+        "text": "## Variable Temperature Insert (VTI)\n\n### Function:\n\n1\n\nControls sample space temperature over a wide range.\n\n2\n\nEnables precise cooling via regulated helium gas flow using a needle valve.\n\n#### Operational Sequence:\n\nRoom-temperature helium gas\n\nPasses through a charcoal filter.\n\n1\n\n2\n\nFurther cooled\n\nAt the second stage cold head (-4k).\n\n3\n\nHelium flow\n\nflows over the sample, carrying away heat, then returns to a dump tank.\n\n4\n\n5\n\nPre-cooled\n\nBy the first stage shield (-60k).\n\nNeedle valve\n\nControls entry into heat exchanger.\n\n### Thermometry:\n\n#### 1 Cernox Sensor A\n\nAt the heat exchanger (for general system temperature control).\n\n#### 2 Cernox Sensor B\n\nAt or near the sample platform (for direct sample temperature).\n\n### Additional Features:\n\n#### 1 Dual heating\n\n- One at heat chamber\n- One near the sample.\n\n#### 2 Integrated\n\nwith feedback-controlled heaters for precise temperature ramps and stability.\n\n![img-14.jpeg](img-14.jpeg)\n\nSchematic Diagram of VTI Cooling Circuit\n"
+      },
+      {
+        "title": "Vacuum Pumps",
+        "node_id": "0008",
+        "start_index": 13,
+        "end_index": 19,
+        "summary": "This section covers the vacuum pumps and core control equipment used in cryogen-free measurement systems. It details two types of vacuum pumps operating at a range of nearly 10\u207b\u00b3 mbar\u2014oil-free scroll pumps (clean and low-maintenance) and oiled rotary vane pumps (requiring oil for sealing)\u2014along with a technical overview of the Edwards nXDS 6iR scroll pump. Additionally, it describes the electronics rack components, including Lake Shore temperature controllers and monitors, cryogenic magnet power supplies for generating stable magnetic fields with quench protection, and the integration of a Keithley nanovoltmeter and current source for precise low-temperature electrical measurements.",
+        "text": "",
+        "nodes": [
+          {
+            "title": "Vacuum Pumps (intro)",
+            "node_id": "0009",
+            "start_index": 13,
+            "end_index": 13,
+            "summary": "## Vacuum Pumps\n\nThere are two types of vacuum pumps used for transport of helium in cryogen free measurement system:\n",
+            "text": "## Vacuum Pumps\n\nThere are two types of vacuum pumps used for transport of helium in cryogen free measurement system:\n"
+          },
+          {
+            "title": "A) Oil-Free Scroll Pump",
+            "node_id": "0010",
+            "start_index": 13,
+            "end_index": 13,
+            "summary": "### A) Oil-Free Scroll Pump\n\n- Two spiral scrolls: one fixed, one orbiting.\n- Gas enters at the edge, gets trapped in pockets.\n- Pockets move inward as volume decreases, compressing gas.\n- Compressed gas exits through center exhaust.\n- No oil needed \u2192 clean, low-maintenance, ideal for CFMS.\n",
+            "text": "### A) Oil-Free Scroll Pump\n\n- Two spiral scrolls: one fixed, one orbiting.\n- Gas enters at the edge, gets trapped in pockets.\n- Pockets move inward as volume decreases, compressing gas.\n- Compressed gas exits through center exhaust.\n- No oil needed \u2192 clean, low-maintenance, ideal for CFMS.\n"
+          },
+          {
+            "title": "B) Oiled Rotary Vane Pump",
+            "node_id": "0011",
+            "start_index": 13,
+            "end_index": 14,
+            "summary": "### B) Oiled Rotary Vane Pump\n\n- Rotor with spring-loaded vanes rotates inside chamber.\n- Gas enters, trapped between vanes, compressed as rotor turns.\n- Compressed gas exits through exhaust port.\n- Requires oil for sealing, lubrication, and cooling.\n- Higher maintenance, risk of oil contamination.\n\nBoth the pumps have a vacuum range of nearly 10\u207b\u00b3 mbar.\n\n![img-15.jpeg](img-15.jpeg)\n\nOil-Free Scroll Pump\n\n![img-16.jpeg](img-16.jpeg)\n\nOiled Rotary Vane Pump\n",
+            "text": "### B) Oiled Rotary Vane Pump\n\n- Rotor with spring-loaded vanes rotates inside chamber.\n- Gas enters, trapped between vanes, compressed as rotor turns.\n- Compressed gas exits through exhaust port.\n- Requires oil for sealing, lubrication, and cooling.\n- Higher maintenance, risk of oil contamination.\n\nBoth the pumps have a vacuum range of nearly 10\u207b\u00b3 mbar.\n\n![img-15.jpeg](img-15.jpeg)\n\nOil-Free Scroll Pump\n\n![img-16.jpeg](img-16.jpeg)\n\nOiled Rotary Vane Pump\n"
+          },
+          {
+            "title": "Edwards nXDS 6iR Pump",
+            "node_id": "0012",
+            "start_index": 14,
+            "end_index": 16,
+            "summary": "This text provides a technical overview of the Edwards nXDS 6iR scroll pump, detailing its nomenclature, internal bearing functions, and labeled physical components. Additionally, it describes the Electronics Rack of the cryogen-free management system, listing its core hardware components and control devices.",
+            "text": "### Edwards nXDS 6iR Pump\n\n|  Code | Meaning  |\n| --- | --- |\n|  nXDS | Edwards scroll pump series name (Next generation X Dry Scroll)  |\n|  6 | Pumping speed: 6 m\u00b3/h (cubic meters per hour)  |\n|  i | \"Intelligent\" \u2014 has advanced control features, digital interface, better monitoring  |\n|  R | \"Corrosive Resistant\" version \u2014 designed with special internal coatings/seals to handle light corrosive gases  |\n\nBearing: There exists a set of bearing inside the scroll pump which helps in:\n\n- Maintaining orbital shaft's precise orbiting motion.\n- Keep the correct alignment between orbiting and fixed scrolls.\n- Reduce friction and mechanical wear.\n\n![img-17.jpeg](img-17.jpeg)\n\n1. Lifting eye\n2. NW25 inlet port\n3. Gas ballast control\n4. Cooling fan\n5. NW25 exhaust port\n6. Rubber feet\n7. 15-way D-type connector\n8. USB port (service mode only)\n9. User interface panel\n10. Mains power connector\n11. Secondary earth bond point\n\n#### Electronics Rack\n\nIt consists of all the electronic hardware and machines which comprises the cryogen free management system. The components of electronics rack are:\n\n- Temperature Controller\n- Temperature Monitor\n- Magnet Power Supply\n- Nanovoltmeter\n- DC and AC Current Source\n- Two Computers\n- CPU for Computers\n\n![img-18.jpeg](img-18.jpeg)\n\nElectronics Rack\n"
+          },
+          {
+            "title": "A) Temperature Controller and Monitor",
+            "node_id": "0013",
+            "start_index": 16,
+            "end_index": 17,
+            "summary": "The text details two Lake Shore temperature measurement devices: the Model 350 Temperature Controller, which actively regulates cryogenic temperatures using sensor inputs and PID heater control, and the Model 218 Temperature Monitor, which reads and logs temperatures from up to eight sensors without providing heater control.",
+            "text": "### A) Temperature Controller and Monitor\n\n#### 1) Lake Shore Model 350 Temperature Controller\n\n- Function: Controls and monitors temperature.\n- Inputs: Up to 4 cryogenic sensors (Cernox, diode, etc.).\n- Output: Heater control (up to 75 W).\n- Working: Reads temperature \u2192 compares to setpoint \u2192 adjusts heater power using PID control.\n- Use: Actively maintains sample temperature in cryogenic systems.\n\n#### 2) Lake Shore Model 218 Temperature Monitor\n\n- Function: Monitors (only reads) temperature.\n- Inputs: 8 sensor inputs (diode, thermocouple, RTD, etc.).\n- Output: No heater control.\n- Working: Continuously reads and displays temperatures.\n- Use: Logs temperatures at multiple points (e.g. cryocooler, chamber walls).\n\n![img-19.jpeg](img-19.jpeg)\n\nLakeshore Temperature Controller and Monitor\n"
+          },
+          {
+            "title": "B) Cryogenic Magnet Power Supply",
+            "node_id": "0014",
+            "start_index": 17,
+            "end_index": 18,
+            "summary": "### B) Cryogenic Magnet Power Supply\n\n- Supplies precise DC current to superconducting magnet \u2192 creates magnetic field.\n- Field strength \u221d current (B=\u03bc\u2080nI).\n- Uses slow ramping to prevent quenching.\n- Supports both positive and negative currents (field reversal).\n- Can operate in persistent mode (constant field without continuous power).\n- Includes quench protection, overcurrent/overvoltage safety, and interlocks.\n- Controlled manually or via computer (Using LabVIEW Magnet Power Supply VI).\n- Works together with temperature control, vacuum, and measurement system.\n- Typical specs: ~50\u2013100 A, 5\u201310 V, ppm-level stability.\n\n![img-20.jpeg](img-20.jpeg)\n\nCryogenic SMS60C Magnet Power Supply\n",
+            "text": "### B) Cryogenic Magnet Power Supply\n\n- Supplies precise DC current to superconducting magnet \u2192 creates magnetic field.\n- Field strength \u221d current (B=\u03bc\u2080nI).\n- Uses slow ramping to prevent quenching.\n- Supports both positive and negative currents (field reversal).\n- Can operate in persistent mode (constant field without continuous power).\n- Includes quench protection, overcurrent/overvoltage safety, and interlocks.\n- Controlled manually or via computer (Using LabVIEW Magnet Power Supply VI).\n- Works together with temperature control, vacuum, and measurement system.\n- Typical specs: ~50\u2013100 A, 5\u201310 V, ppm-level stability.\n\n![img-20.jpeg](img-20.jpeg)\n\nCryogenic SMS60C Magnet Power Supply\n"
+          },
+          {
+            "title": "C) Nanovoltmeter and Current source",
+            "node_id": "0015",
+            "start_index": 18,
+            "end_index": 19,
+            "summary": "The text outlines the features and combined usage of the Keithley 2182A Nanovoltmeter and Keithley 6221 DC/AC Current Source, highlighting how their integration in delta mode enables precise, low-noise electrical measurements for low-temperature transport studies.",
+            "text": "### C) Nanovoltmeter and Current source\n\n#### 1) Keithley 2182A Nanovoltmeter\n\n- Measures ultra-small voltages (nanovolt level).\n- High input impedance, low noise.\n- Filters external noise, stable readings.\n- Used for Hall voltage, resistance, MR measurements.\n- Syncs with 6221 for delta mode (noise cancellation).\n\n#### 2) Keithley 6221 DC/AC Current Source\n\n- Supplies precise DC/AC current (pA to 100 mA).\n- Very low noise, stable output.\n- Generates AC waveforms for dynamic measurements.\n- Paired with 2182A for precision measurements (delta mode).\n\nCombined Together:\n\n- 6221 applies current \u2192 2182A measures voltage.\n- Delta mode cancels thermal noise.\n- Ideal for CFMS low-temp transport studies.\n\n![img-21.jpeg](img-21.jpeg)\n\nKeithley 2182A\n\nNanovoltmeter\n\n![img-22.jpeg](img-22.jpeg)\n\nKeithley 6221 DC/AC\n\nCurrent Source\n"
+          }
+        ]
+      },
+      {
+        "title": "Software and System Control (LabVIEW)",
+        "node_id": "0016",
+        "start_index": 19,
+        "end_index": 20,
+        "summary": "## Software and System Control (LabVIEW)\n\nThe CFMS is operated via an integrated software suite built on LabVIEW, which provides full GUI-based control through modular Virtual Instruments (VIs).\n\n![img-23.jpeg](img-23.jpeg)\n\n![img-24.jpeg](img-24.jpeg)\n\nSystem Computers\n\n![img-25.jpeg](img-25.jpeg)\n\nSystem Computers' CPU\n\n### Key Software Features:\n\n- Built-in Sequence Editor for automated multi-step measurements.\n- Real-time control over:\n\n- Temperature\n- Magnetic Field\n- Resistivity\n- Hall Voltage and Hall Resistivity\n- Valve States\n\n- Real-time and historical data logging.\n- Graphical representation of system state.\n",
+        "text": "## Software and System Control (LabVIEW)\n\nThe CFMS is operated via an integrated software suite built on LabVIEW, which provides full GUI-based control through modular Virtual Instruments (VIs).\n\n![img-23.jpeg](img-23.jpeg)\n\n![img-24.jpeg](img-24.jpeg)\n\nSystem Computers\n\n![img-25.jpeg](img-25.jpeg)\n\nSystem Computers' CPU\n\n### Key Software Features:\n\n- Built-in Sequence Editor for automated multi-step measurements.\n- Real-time control over:\n\n- Temperature\n- Magnetic Field\n- Resistivity\n- Hall Voltage and Hall Resistivity\n- Valve States\n\n- Real-time and historical data logging.\n- Graphical representation of system state.\n"
+      },
+      {
+        "title": "Virtual Instrument (VI) Modules",
+        "node_id": "0017",
+        "start_index": 20,
+        "end_index": 24,
+        "summary": "The text details the six Virtual Instrument (VI) modules used to control and monitor system hardware\u2014including temperature, magnet power, valves, thermometers, measurements, and experiment sequences\u2014along with the system software startup procedure.",
+        "text": "## Virtual Instrument (VI) Modules\n\n### 1. Temperature Controller VI\n\n- Sets and maintains target temperatures for Sensor A and B.\n- Displays:\n  - Current temperature, Heater power and PID control status.\n- Interfaces:\n  - Temperature Control and Ramp Settings.\n\n### 2. Magnet Power Supply VI\n\n- Displays and controls:\n  - Present field, Target field and Ramp rate.\n- Switches between:\n  - Non-persistent mode (heater ON, power supplied)\n  - Persistent mode (heater OFF, field locked)\n\n![img-26.jpeg](img-26.jpeg)\n\n### 3. Valve Control VI\n\n- Allows manual and automated control of cryogenic gas valves.\n- Color-coded valve indicators:\n\n- Green = Open\n- Red = Closed\n\n- Interlock logic prevents invalid configurations (e.g., opening inlet and exhaust simultaneously).\n\nNote: We do the valve control manually in most experiments.\n\n### 4. Thermometer Scanner VI\n\n- Continuously logs temperature at six critical system points.\n- Data logging functionality for cooldown diagnostics.\n- Controlled via Lakeshore selector channel.\n\n![img-27.jpeg](img-27.jpeg)\n\n![img-28.jpeg](img-28.jpeg)\n\n### 5. Measurement VI\n\n- Controls 20+ internal variables.\n- Ramp or step a variable (e.g., temperature, field).\n- View previous data.\n- Plot graphs and save experimental runs.\n\n![img-29.jpeg](img-29.jpeg)\n\n### 6. Sequence Editor VI\n\n- Design and execute multi-frame, nested experiments.\n- Include conditional logic and parallel tasks.\n- Sequences stored in .seq format and reloaded on demand.\n\n![img-30.jpeg](img-30.jpeg)\n\n### System Software Startup Procedure\n\n![img-31.jpeg](img-31.jpeg)\n"
+      },
+      {
+        "title": "Operating the system",
+        "node_id": "0018",
+        "start_index": 24,
+        "end_index": 28,
+        "summary": "This section covers the complete operational procedures and safety guidelines for the system, including vacuum-purging preparation, cooling and cooldown processes, executing measurements, warming up the system, and essential safety protocols regarding magnetic fields, overpressure protection, and quench prevention.",
+        "text": "",
+        "nodes": [
+          {
+            "title": "(A) Vacuum-Purging",
+            "node_id": "0019",
+            "start_index": 24,
+            "end_index": 25,
+            "summary": "### (A) Vacuum-Purging\n\n- Check temperature of chamber=Room temp (~300K).\n- Connect VTI- Scroll pump & He-inlet Rotary.\n- Wait for 24-36 hours for temperature to remain stable.\n- For vacuum of chamber:\n\n(a) Close chamber valve (very important, so that oil from pump does not enter chamber.)\n(b) Start high vacuum rotary.\n(c) Check vacuum through pressure gauge (roughly ~0.001 mbar).\n\n- Fill He in He-dump (till 0-0.5 psi).\n\n- Close the He-dump valve.\n\n- Connect He-dump to He-inlet and Rotary to the Scroll pump output. Open the Needle valve and then immediately open the Scroll pump valve.\n\n- Wait for 24 hours.\n",
+            "text": "### (A) Vacuum-Purging\n\n- Check temperature of chamber=Room temp (~300K).\n- Connect VTI- Scroll pump & He-inlet Rotary.\n- Wait for 24-36 hours for temperature to remain stable.\n- For vacuum of chamber:\n\n(a) Close chamber valve (very important, so that oil from pump does not enter chamber.)\n(b) Start high vacuum rotary.\n(c) Check vacuum through pressure gauge (roughly ~0.001 mbar).\n\n- Fill He in He-dump (till 0-0.5 psi).\n\n- Close the He-dump valve.\n\n- Connect He-dump to He-inlet and Rotary to the Scroll pump output. Open the Needle valve and then immediately open the Scroll pump valve.\n\n- Wait for 24 hours.\n"
+          },
+          {
+            "title": "(B) Cooling",
+            "node_id": "0020",
+            "start_index": 25,
+            "end_index": 26,
+            "summary": "### (B) Cooling\n\n- Switch \"On\" the Chiller.\n- Fill He in He-dump till half (0-0.5psi).\n- Then, open He-dump valve.\n- Wait for 1-1.5 hours if system has been started after a long time, otherwise wait for 10-15 mins.\n- Close the He-dump valve.\n- Fill He in He-dump again (till 0-0.5 psi) and close the needle valve.\n- Connect He-dump to He-inlet.\n- Open Needle valve.\n- Check the VTI Gauge: It should be between 10-15 mbar.\n- Immediately close the scroll pump valve and open He-dump valve.\n- Switch 'ON' the compressor.\n- Check water level and the temperature of chiller regularly, the compressor starts working around 25\u00b0C.\n",
+            "text": "### (B) Cooling\n\n- Switch \"On\" the Chiller.\n- Fill He in He-dump till half (0-0.5psi).\n- Then, open He-dump valve.\n- Wait for 1-1.5 hours if system has been started after a long time, otherwise wait for 10-15 mins.\n- Close the He-dump valve.\n- Fill He in He-dump again (till 0-0.5 psi) and close the needle valve.\n- Connect He-dump to He-inlet.\n- Open Needle valve.\n- Check the VTI Gauge: It should be between 10-15 mbar.\n- Immediately close the scroll pump valve and open He-dump valve.\n- Switch 'ON' the compressor.\n- Check water level and the temperature of chiller regularly, the compressor starts working around 25\u00b0C.\n"
+          },
+          {
+            "title": "(C) Cooldown",
+            "node_id": "0021",
+            "start_index": 26,
+            "end_index": 26,
+            "summary": "### (C) Cooldown\n\n- Use thermometer scanner VI to confirm initial temperatures.\n- Flush sample chamber and VTI.\n- Load cooldown sequence in sequence editor.\n- Begin sequence execution to automate ramp down.\n- Monitor pressure and temperatures; helium dump should drop to nearly 0.2 bar.\n",
+            "text": "### (C) Cooldown\n\n- Use thermometer scanner VI to confirm initial temperatures.\n- Flush sample chamber and VTI.\n- Load cooldown sequence in sequence editor.\n- Begin sequence execution to automate ramp down.\n- Monitor pressure and temperatures; helium dump should drop to nearly 0.2 bar.\n"
+          },
+          {
+            "title": "(D) Measurement Execution",
+            "node_id": "0022",
+            "start_index": 26,
+            "end_index": 27,
+            "summary": "### (D) Measurement Execution\n\n- Define sequence parameters: variable, ramp range, duration.\n- Load and execute sequence.\n- Live graph and data logging occurs.\n- Parameters may include: temperature, field, valve states, etc.\n",
+            "text": "### (D) Measurement Execution\n\n- Define sequence parameters: variable, ramp range, duration.\n- Load and execute sequence.\n- Live graph and data logging occurs.\n- Parameters may include: temperature, field, valve states, etc.\n"
+          },
+          {
+            "title": "Warming up the system",
+            "node_id": "0023",
+            "start_index": 27,
+            "end_index": 27,
+            "summary": "### Warming up the system\n\n#### Procedure\n\n- Open needle valve, switch off helium pump.\n- Turn off compressor and wait 10 min before turning off cooling water.\n- Allow system to warm naturally (36\u201348 hours).\n- Never disconnect helium dump or compressor while system is cold.\n- Monitor using thermometer VI.\n",
+            "text": "### Warming up the system\n\n#### Procedure\n\n- Open needle valve, switch off helium pump.\n- Turn off compressor and wait 10 min before turning off cooling water.\n- Allow system to warm naturally (36\u201348 hours).\n- Never disconnect helium dump or compressor while system is cold.\n- Monitor using thermometer VI.\n"
+          },
+          {
+            "title": "SAFETY GUIDELINES",
+            "node_id": "0024",
+            "start_index": 27,
+            "end_index": 28,
+            "summary": "### SAFETY GUIDELINES\n\n#### Magnetic Field Danger\n\nAlways maintain >2 m clearance from the magnet's center.\n\n#### Magnetic Field Zone\n\nMagnetic field danger zone exceeds 5 gauss. Remove all ferromagnetic tools, credit cards, medical implants\n\n#### Overpressure Protection\n\n3 pressure relief valves: VTI, helium inlet, sample chamber.\n\n#### Quench Protection\n\nSystem stores high inductive energy. Never interrupt HTS leads unless magnet is fully discharged.\n",
+            "text": "### SAFETY GUIDELINES\n\n#### Magnetic Field Danger\n\nAlways maintain >2 m clearance from the magnet's center.\n\n#### Magnetic Field Zone\n\nMagnetic field danger zone exceeds 5 gauss. Remove all ferromagnetic tools, credit cards, medical implants\n\n#### Overpressure Protection\n\n3 pressure relief valves: VTI, helium inlet, sample chamber.\n\n#### Quench Protection\n\nSystem stores high inductive energy. Never interrupt HTS leads unless magnet is fully discharged.\n"
+          }
+        ]
+      },
+      {
+        "title": "Maintenance Schedule",
+        "node_id": "0025",
+        "start_index": 28,
+        "end_index": 29,
+        "summary": "## Maintenance Schedule\n\n### Weekly:\n\n- Critically inspect thermometer readings.\n- Grease mechanical machine parts with vacuum grease.\n\n### Annually:\n\n- Call a certified engineer to inspect/repair cryo-cooler.\n- Contact Cryogenic Ltd for planned service.\n\n### Troubleshooting Techniques\n\n1\n\nIssue: No VTI Pressure Change\n\nLikely block due to helium contamination. Evacuate and re-flush the full VTI circuit.\n\n2\n\nIssue: Cryostat warm after cooldown\n\nCheck valve position. Inspect for ice formation. Redo helium circuit.\n\n3\n\nIssue: Magnet not stabilizing\n\nPersistent switch heater might be defective. Ensure full field ramp before switching to persistent mode.\n",
+        "text": "## Maintenance Schedule\n\n### Weekly:\n\n- Critically inspect thermometer readings.\n- Grease mechanical machine parts with vacuum grease.\n\n### Annually:\n\n- Call a certified engineer to inspect/repair cryo-cooler.\n- Contact Cryogenic Ltd for planned service.\n\n### Troubleshooting Techniques\n\n1\n\nIssue: No VTI Pressure Change\n\nLikely block due to helium contamination. Evacuate and re-flush the full VTI circuit.\n\n2\n\nIssue: Cryostat warm after cooldown\n\nCheck valve position. Inspect for ice formation. Redo helium circuit.\n\n3\n\nIssue: Magnet not stabilizing\n\nPersistent switch heater might be defective. Ensure full field ramp before switching to persistent mode.\n"
+      },
+      {
+        "title": "Applications of CFMS",
+        "node_id": "0026",
+        "start_index": 29,
+        "end_index": 34,
+        "summary": "The section covers the applications of the Cryogenic Free Measurement System (CFMS), including magnetic and electrical testing, superconductivity research, quantum and phase behavior, and specific physics phenomena such as I-V characteristics, resistivity, the Hall effect, magnetoresistance, and Heusler alloys. It also highlights key technical tools like Cernox Sensors and Delta Mode measurements, and outlines comprehensive system specifications, including power, dimensions, weight, superconducting magnet details, cryo-cooler requirements, VTI parameters, thermometer channels, and sample chamber dimensions.",
+        "text": "",
+        "nodes": [
+          {
+            "title": "Applications of CFMS (intro)",
+            "node_id": "0027",
+            "start_index": 29,
+            "end_index": 30,
+            "summary": "## Applications of CFMS\n\n- **Magnetic and Electrical Testing** \u2013 Study how materials react to magnetic fields and how electricity flows through them.\n- **Superconductivity Research** \u2013 Analyze materials that conduct electricity without resistance at low temperatures.\n- **Quantum and Phase Behavior** \u2013 Explore unusual effects and phase changes that occur in extreme cold or high magnetic fields.\n- **Explaining important physics phenomena** \u2013\n  - I-V Characteristics\n  - Resistivity\n  - Hall effect\n  - Magnetoresistance\n  - Heusler alloys studies.\n",
+            "text": "## Applications of CFMS\n\n- **Magnetic and Electrical Testing** \u2013 Study how materials react to magnetic fields and how electricity flows through them.\n- **Superconductivity Research** \u2013 Analyze materials that conduct electricity without resistance at low temperatures.\n- **Quantum and Phase Behavior** \u2013 Explore unusual effects and phase changes that occur in extreme cold or high magnetic fields.\n- **Explaining important physics phenomena** \u2013\n  - I-V Characteristics\n  - Resistivity\n  - Hall effect\n  - Magnetoresistance\n  - Heusler alloys studies.\n"
+          },
+          {
+            "title": "Keywords",
+            "node_id": "0028",
+            "start_index": 30,
+            "end_index": 31,
+            "summary": "The text provides an overview of two technical tools used in cryogenic and low-temperature measurements: the Cernox Sensor (a zirconium oxynitride RTD with high cryogenic accuracy and low magnetic sensitivity) and Delta Mode (a measurement technique that reverses current to eliminate thermal EMFs and noise for precise low-voltage readings).",
+            "text": "### Keywords\n\n#### A) Cernox Sensor:\n\n- Type: Resistance temperature sensor (RTD).\n- Material: Zirconium oxynitride film on sapphire.\n- Range: approximately 0.1 K to 420 K (excellent for cryogenics).\n- High accuracy at low temperatures.\n- Low magnetic field sensitivity.\n- Small, easy to mount and fast response.\n- Used in: Cryostats, CFMS, superconductivity, dilution refrigerators.\n\n#### B) Delta Mode:\n\n- Delta Mode is used for precise low-voltage measurements in nanovoltmeter systems.\n- The current source reverses current direction; voltages are measured for both polarities.\n- Thermal EMFs (caused by Seebeck effect due to temperature differences at junctions) stay constant; true signal changes sign.\n- The nanovoltmeter calculates (V+ - V-)/2 to cancel thermal EMFs & low-frequency noise.\n- This provides highly accurate, stable readings, ideal for cryogenic and transport measurements\n"
+          },
+          {
+            "title": "System Specifications",
+            "node_id": "0029",
+            "start_index": 31,
+            "end_index": 34,
+            "summary": "The \"System Specifications\" section covers general mains power requirements, the cryostat and support table dimensions and weight, and detailed technical specifications for the superconducting magnet. It also outlines the cryo-cooler type, power, water, and gas pressure requirements, along with cooldown time. Additionally, it provides specifications for the Variable Temperature Insert (VTI) temperature and pressure parameters, system thermometer channels, sensor types, and locations, as well as the sample chamber type, dimensions, and maximum sample size.",
+            "text": "",
+            "nodes": [
+              {
+                "title": "1) GENERAL",
+                "node_id": "0030",
+                "start_index": 31,
+                "end_index": 31,
+                "summary": "#### 1) GENERAL\n\n|  Parameter | Value  |\n| --- | --- |\n|  Mains power requirements | 240V, 50Hz, 5KW (maximum)  |\n",
+                "text": "#### 1) GENERAL\n\n|  Parameter | Value  |\n| --- | --- |\n|  Mains power requirements | 240V, 50Hz, 5KW (maximum)  |\n"
+              },
+              {
+                "title": "2) CRYOSTAT AND SUPPORT TABLE",
+                "node_id": "0031",
+                "start_index": 31,
+                "end_index": 32,
+                "summary": "#### 2) CRYOSTAT AND SUPPORT TABLE\n\n|  Parameter | Value  |\n| --- | --- |\n|  Approximate Nominal weight (Kg) | 150  |\n|  Approximate Overall dimensions (m) | Width 0.45 \u00d7 length 0.65 \u00d7 height with probe raised 2.52  |\n",
+                "text": "#### 2) CRYOSTAT AND SUPPORT TABLE\n\n|  Parameter | Value  |\n| --- | --- |\n|  Approximate Nominal weight (Kg) | 150  |\n|  Approximate Overall dimensions (m) | Width 0.45 \u00d7 length 0.65 \u00d7 height with probe raised 2.52  |\n"
+              },
+              {
+                "title": "3) MAGNET",
+                "node_id": "0032",
+                "start_index": 32,
+                "end_index": 33,
+                "summary": "The text provides a detailed technical specification table for a superconducting magnet, outlining its type, field homogeneity, decay rate, direction, electrical properties (inductance, maximum field, operating current, and power supply), stray field dimensions, and energisation rates.",
+                "text": "#### 3) MAGNET\n\n|  Parameter | Value  |\n| --- | --- |\n|  Magnet type | NbTi solenoid & persistent mode switch  |\n|  Central field homogeneity % | 0.2 over 20mm (\u00b110mm)  |\n|  Decay rate in persistent mode (ppm/hr) | 10  |\n|  Field direction | Vertical  |\n|  Magnet inductance (Henries) | 2.7  |\n|  Maximum field (Tesla) | 5 (G/A = 0.1065)  |\n|  Nominal operating current (amps) | <60  |\n|  Radial stray field 5 gauss contour (m) | 0.7 (from centre of magnet)  |\n|  Vertical stray field 5 gauss contour (m) | 0.9 (from centre of magnet)  |\n|  Initial magnet energisation rate (Tesla/min) | 1  |\n|  Maximum subsequent energisation rate (Tesla/min) | 2  |\n|  Magnet power supply | Cryogenic SMS60C (120A, \u00b15V)  |\n"
+              },
+              {
+                "title": "4) CRYO-COOLER",
+                "node_id": "0033",
+                "start_index": 33,
+                "end_index": 33,
+                "summary": "#### 4) CRYO-COOLER\n\n|  Parameter | Value  |\n| --- | --- |\n|  Type | Sumitomo 0.5W Pulse Tube  |\n|  Compressor mains requirements | 380, 400, 415 V, 50 Hz, 3 phase, 13A operating current  |\n|  Compressor cooling water minimum flow rate (l/min) | 7  |\n|  Static compressor gas pressure (MPa) | 1.7 \u2013 1.72  |\n|  Working compressor gas pressure (MPa) | High: 2.1 \u2013 2.5Low: 0.5 \u2013 0.8  |\n|  Typical cooldown time (hrs) | 9  |\n",
+                "text": "#### 4) CRYO-COOLER\n\n|  Parameter | Value  |\n| --- | --- |\n|  Type | Sumitomo 0.5W Pulse Tube  |\n|  Compressor mains requirements | 380, 400, 415 V, 50 Hz, 3 phase, 13A operating current  |\n|  Compressor cooling water minimum flow rate (l/min) | 7  |\n|  Static compressor gas pressure (MPa) | 1.7 \u2013 1.72  |\n|  Working compressor gas pressure (MPa) | High: 2.1 \u2013 2.5Low: 0.5 \u2013 0.8  |\n|  Typical cooldown time (hrs) | 9  |\n"
+              },
+              {
+                "title": "5) VTI",
+                "node_id": "0034",
+                "start_index": 33,
+                "end_index": 34,
+                "summary": "#### 5) VTI\n\n|  Parameter | Value  |\n| --- | --- |\n|  Temperature range (K) | 1.6 \u2013 325  |\n|  Temperature stability (K) | \u00b1 0.05  |\n|  Internal diameter (mm) | 25  |\n|  Normal operating pressure (mbar) | 8  |\n|  Dump vessel pressure with system at room temperature | Atmosphere plus 0.25 bar (approx)  |\n|  Dump vessel pressure with VTI at base temperature | Atmosphere minus 0.75 bar (approx)  |\n",
+                "text": "#### 5) VTI\n\n|  Parameter | Value  |\n| --- | --- |\n|  Temperature range (K) | 1.6 \u2013 325  |\n|  Temperature stability (K) | \u00b1 0.05  |\n|  Internal diameter (mm) | 25  |\n|  Normal operating pressure (mbar) | 8  |\n|  Dump vessel pressure with system at room temperature | Atmosphere plus 0.25 bar (approx)  |\n|  Dump vessel pressure with VTI at base temperature | Atmosphere minus 0.75 bar (approx)  |\n"
+              },
+              {
+                "title": "6) SYSTEM THERMOMETERS",
+                "node_id": "0035",
+                "start_index": 34,
+                "end_index": 34,
+                "summary": "The text outlines the system thermometers used in the setup, detailing their Lakeshore channels, sensor types, physical locations, and typical operating temperature ranges.",
+                "text": "#### 6) SYSTEM THERMOMETERS\n\n|  Lakeshore Channel | Type and Label | Location and Typical Temperature  |\n| --- | --- | --- |\n|  A | Sensor A: cernox | VTI heat exchanger  |\n|  B | Sensor B: cernox | Within 10mm of sample position  |\n|  C1 | 1st stage: ceramic composite sensor | Cryo-cooler 1st stage (25 \u2013 40K)  |\n|  C2 | 2nd stage: ceramic composite sensor | Cryo-cooler 2nd stage (3.0 \u2013 4.5K)  |\n|  C3 | Magnet: ceramic composite sensor | Magnet winding (3.0 \u2013 4.5K)  |\n|  C4 | Switch: ceramic composite sensor | Persistent mode switch (3.0 \u2013 10.0K)  |\n|  D1 | He pot: ceramic composite sensor | Liquid helium pot (3.0 \u2013 4.2K)  |\n|  D4 | Charcoal Trap: ceramic composite sensor | Charcoal filter (25 \u2013 45K)  |\n"
+              },
+              {
+                "title": "7) SAMPLE CHAMBER",
+                "node_id": "0036",
+                "start_index": 34,
+                "end_index": 34,
+                "summary": "#### 7) SAMPLE CHAMBER\n\n|  Parameter | Value  |\n| --- | --- |\n|  Type | Isolated, filled with helium exchange gas  |\n|  Internal diameter (mm) | 25 mm (vacuum sample space)  |\n|  Maximum sample size | 4mm x 8mm  |\n",
+                "text": "#### 7) SAMPLE CHAMBER\n\n|  Parameter | Value  |\n| --- | --- |\n|  Type | Isolated, filled with helium exchange gas  |\n|  Internal diameter (mm) | 25 mm (vacuum sample space)  |\n|  Maximum sample size | 4mm x 8mm  |\n"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

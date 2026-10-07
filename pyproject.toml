@@ -1,0 +1,14 @@
+[project]
+name = "cfms-rag-agent"
+version = "0.1.0"
+description = "A Vectorless RAG based AI agent for Cryogen Free Measurement System."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=7.4.0",
+    "langchain>=1.4.3",
+    "langchain-openai>=1.6.7",
+    "pageindex>=0.2.21",
+    "python-dotenv>=1.2.4",
+    "streamlit>=1.65.0",
+]
