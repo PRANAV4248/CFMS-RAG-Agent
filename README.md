@@ -1,10 +1,35 @@
 # CFMS RAG Agent
 
-A **vectorless, tree-based Retrieval-Augmented Generation (RAG) assistant** for answering questions about the **Cryogen Free Measurement System (CFMS)** project report made by Pranav Choubey during his internship at **IIT (BHU), Varanasi**.
+A **vectorless, tree-based Retrieval-Augmented Generation (RAG) assistant** for answering questions about the **Cryogen Free Measurement System (CFMS)** project report made by **Pranav Choubey** during his internship at **IIT (BHU), Varanasi**.
 
 The application combines **PageIndex**, **LangChain/LangGraph**, and an **NVIDIA-hosted LLM** to retrieve relevant sections from a structured document tree and generate answers with **section and page-level citations**.
 
 Unlike conventional RAG systems, this project does **not** use chunkings, embeddings or a vector database. Instead, the document is represented as a JSON based hierarchical/tree index, and the agent uses that structure to decide which sections and pages it needs to read.
+
+---
+
+## 🚀 Live Website
+
+- Try the agent now - [CFMS RAG Agent Website](https://cfms-rag-agent.streamlit.app/)
+
+---
+
+## 👨‍💻 Author - Pranav Choubey
+
+**AI/ML Engineer** building end-to-end AI, data science, and intelligent applications.
+
+**LinkedIn profile:** [pranavchoubey89](https://www.linkedin.com/in/pranavchoubey89/)
+**GitHub profile:** [PRANAV424](https://github.com/PRANAV4248)
+
+---
+
+## 🏠 Home Page
+
+![Home Page](src/documents/agent_home_page.png)
+
+## 💬 Chat Interface
+
+![Chat Interface](src/documents/agent_chat.png)
 
 ---
 
@@ -57,7 +82,7 @@ Agent selects relevant sections
    ↓
 Page-level content retrieval
    ↓
-Nvidia LLM
+LLM
    ↓
 Answer + cited sections/pages
 ```
@@ -112,7 +137,7 @@ The agent is instructed to use the document’s table of contents to locate rele
         ┌────────────────┐ ┌────────────────┐ ┌─────────────────┐
         │    PageIndex   │ │ LangChain /    │ │ LangGraph       │
         │ Document Tree  │ │ Chat Model     │ │ Agent + Memory  │
-        └────────────────┘ └───────┬────────┘ └─────────────────┘
+        └────────────────┘ └────────┬───────┘ └─────────────────┘
                                     │
                                     ▼
                          ┌──────────────────────┐
@@ -728,19 +753,5 @@ For technical documents such as engineering reports, manuals, and research docum
 # 📄 Project Summary
 
 **CFMS RAG Agent** is a vectorless RAG application that enables natural-language question answering over a Cryogen Free Measurement System report. It uses PageIndex to create a hierarchical document representation and a LangChain/LangGraph agent to identify and retrieve relevant document sections. An NVIDIA-hosted LLM generates structured answers with section and page references, while Streamlit provides the interactive chat interface.
-
----
-
-# 👨‍💻 Author
-
-## Pranav Choubey
-
-**AI/ML Engineer** building end-to-end AI, data science, and intelligent analytics applications.
-
-**LinkedIn:**
-https://www.linkedin.com/in/pranavchoubey89/
-
-**GitHub:**
-https://github.com/PRANAV4248
 
 ---
