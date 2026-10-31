@@ -23,7 +23,7 @@ _CACHE    = os.path.join(DOCS_DIR, "pageindex_docs.json")
 _TREE_DIR = os.path.join(DOCS_DIR, "trees")
 
 NVIDIA_BASE_URL = "https://integrate.api.nvidia.com/v1"
-PRIMARY_MODEL   = "nvidia/nemotron-3-super-120b-a12b"
+PRIMARY_MODEL   = "nvidia/nemotron-3.5-super-vl-120b-a12b"
 
 # Prevents concurrent sessions from uploading the same PDF simultaneously.
 _DOC_LOCK = threading.Lock()
